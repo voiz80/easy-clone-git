@@ -14,7 +14,7 @@ sudo systemctl start easygit.service
 ## Info easygit.py
 - Sleep 180 sec
 - Check server_host alive. If not check again after ping_sleep
-- If ExistPath pull repo and execute "setup.sh"
+- If ExistPath pull repo and execute "setup.sh". Allways! Why we might have updates in the repo described in "mother-repo" --> setup.sh
 - Else clone repo and execute "setup.sh"
 
 ## Mother Repo - this repo can control many other repos described in own "setup.sh"
@@ -23,3 +23,9 @@ sudo systemctl start easygit.service
 main_repo = "mother-repo"
 ```
 Create empty repository with same name like main_repo and commit "setup.sh"
+```
+repo_name1="/<add your name repo>"
+repo_name2="/<add your name repo>"
+# etc.
+```
+## In outher repo may be other setup.sh scripts with some bash commands.
