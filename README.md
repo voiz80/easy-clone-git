@@ -18,14 +18,16 @@ sudo systemctl start easygit.service
 - Else clone repo and execute "setup.sh"
 
 ## Mother Repo - this repo can control many other repos described in own "setup.sh"
+In setup.sh are described the rest of the projects that Linux machines need to download/clone and perform the steps described in it!
 ```
 # variable in easygit.py
 main_repo = "mother-repo"
 ```
-Create empty repository with same name like main_repo and commit "setup.sh"
+### Create empty repository with same name like mother-repo and commit "setup.sh"
 ```
+# edit variables
 repo_name1="/<add your name repo>"
 repo_name2="/<add your name repo>"
 # etc.
 ```
-## In outher repo may be other setup.sh scripts with some bash commands.
+## In others repo may be other setup.sh scripts with some bash commands.
