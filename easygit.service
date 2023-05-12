@@ -1,0 +1,14 @@
+[Unit]
+Description=Gitclone Pull Service
+After=network.target
+
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python3 ~/easy-clone-git/easygit.py
+RemainAfterExit=no
+Restart=on-failure
+RestartSec=10s
+
+[Install]
+WantedBy=multi-user.target
